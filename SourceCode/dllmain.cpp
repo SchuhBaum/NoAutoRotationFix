@@ -7,9 +7,11 @@ using namespace mINI;
 using namespace ModUtils;
 using namespace std;
 
-string version = "0.0.1";
+const string author = "SchuhBaum";
+const string version = "0.0.1";
 
 DWORD WINAPI MainThread(LPVOID lpParam) {
+    Log("author " + author);
 	Log("version " + version);
     
     // vanilla bug:
@@ -42,11 +44,13 @@ DWORD WINAPI MainThread(LPVOID lpParam) {
     
 	Replace(assembly_location, vanilla, modded);
 	CloseLog();
-	return 0;
+	
+    // are the return values used for anything?;
+    return 1;
 }
 
 BOOL WINAPI DllMain(HINSTANCE module, DWORD reason, LPVOID) {
-	if (reason != DLL_PROCESS_ATTACH) return 1;
+	if (reason != DLL_PROCESS_ATTACH) return 0;
 	DisableThreadLibraryCalls(module);
 	CreateThread(0, 0, &MainThread, 0, 0, NULL);
 	return 1;
