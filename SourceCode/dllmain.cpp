@@ -16,10 +16,10 @@ DWORD WINAPI MainThread(LPVOID lpParam) {
     
     // vanilla bug:
     // when you don't move the camera with the mouse then you get a brief auto
-    // rotation (lean effect?) every time you move your character left or right;
-    // the rotation variable of the camera does not change; this is why the auto
-    // rotation option in the menu does not help here; I checked using a cheat
-    // table that can alter and show camera variables;
+    // rotation (lean effect?) every time you move your character left or right; the
+    // rotation variable (yaw) of the camera does not change; this is why the auto
+    // rotation option in the menu does not help here; I checked using a cheat table
+    // that can alter and show camera variables;
     
     // vanilla:
     // the variable at [rcx+00000140] has to do with moving the camera; in that case 

@@ -1,1 +1,0 @@
-See the comments in the file dllmain.cpp. You can open it with any text editor.
