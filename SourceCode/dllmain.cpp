@@ -24,7 +24,7 @@ DWORD WINAPI MainThread(LPVOID lpParam) {
     // vanilla:
     // the variable at [rcx+00000140] has to do with moving the camera; in that case 
     // it is set to one; when you stop moving the camera then it decreases to zero
-    // after a couple of seconds; when it hits zero then the bug happens;
+    // after like three seconds; when it hits zero then the bug happens;
     // F3 0F11 89 40010000      --  movss [rcx+00000140],xmm1
     // 76 06                    --  jna <current_address + 06> (I think)
     // 89 B9 40010000           --  mov [rcx+00000140],edi

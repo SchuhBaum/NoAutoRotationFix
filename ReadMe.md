@@ -13,7 +13,7 @@ https://www.youtube.com/watch?v=0-MaByXTaxw
 0. Download and install [Elden Mod Loader](https://www.nexusmods.com/eldenring/mods/117) and [Anti-Cheat Toggler](https://www.nexusmods.com/eldenring/mods/90/). Disable anti-cheat if not done already.
 1. Download the file `NoAutoRotationFix.zip` from [Releases](https://github.com/SchuhBaum/NoAutoRotationFix/releases/tag/v0.0.1).
 2. Extract its content in the folder `[Steam]\SteamApps\common\ELDEN RING\Game\`.
-3. Start the game as normal.  
+3. Start the game as normal. Make sure that the in-game option `Launch Setting` is set to `Play Offline`.  
 
 ### Bug reports
 This is my first mod for Elden Ring and my first time modifying a game using assembly language. If you find bugs or side effects let me know. Please describe step-by-step how to reproduce the issue.
