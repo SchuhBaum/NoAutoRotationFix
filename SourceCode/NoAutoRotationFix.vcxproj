@@ -3,7 +3,7 @@
 
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <RootNamespace>NoAutoRotationFix</RootNamespace>
   </PropertyGroup>
   
