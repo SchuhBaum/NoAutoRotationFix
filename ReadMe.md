@@ -26,7 +26,7 @@ There are two licenses available - MIT and Unlicense. You can choose which one y
 
 ### Changelog
 v0.0.2:
-- The same bug happens when you lock-on. Fixed in this version.
+- The same vanilla bug happens when you lock-on. Fixed in this version.
 
 v0.0.1:
 - Initial release.
