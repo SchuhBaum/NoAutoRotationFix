@@ -8,10 +8,19 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp" />
-    <ClInclude Include="ini.h" />
-    <ClInclude Include="ModUtils.h" />
+    <!-- <ClCompile Include="dllmain.cpp"/> -->
+    <ClCompile Include="**/*.cpp"/>
+    <!-- <Link Include="d3d11.lib;d3d12.lib;D3DCompiler.lib"/> -->
   </ItemGroup>
+  
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <!-- <Link> -->
+      <!-- <ForceFileOutput>MultiplyDefinedSymbolOnly</ForceFileOutput> -->
+    <!-- </Link> -->
+  </ItemDefinitionGroup>
   
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|x64">
