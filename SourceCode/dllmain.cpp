@@ -1,6 +1,7 @@
 #include "include/ModUtils.h"
 #include "include/ini.h"
 #include <Windows.h>
+#include <thread>
 
 using namespace mINI;
 using namespace ModUtils;
@@ -9,6 +10,9 @@ const std::string author = "SchuhBaum";
 const std::string version = "0.0.2";
 
 DWORD WINAPI MainThread(LPVOID lpParam) {
+    using namespace std::chrono_literals;
+    std::this_thread::sleep_for(5s);
+    
     Log("author " + author);
 	Log("version " + version);
     Log_Separator();
