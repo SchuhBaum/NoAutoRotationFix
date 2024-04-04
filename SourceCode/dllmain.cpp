@@ -1,14 +1,20 @@
 #include "include/ModUtils.h"
 #include "include/ini.h"
+#include <chrono>
+#include <thread>
 #include <Windows.h>
 
 using namespace mINI;
 using namespace ModUtils;
 
 const std::string author = "SchuhBaum";
-const std::string version = "0.0.2";
+const std::string version = "0.0.3";
 
 DWORD WINAPI MainThread(LPVOID lpParam) {
+    // this is for ModEngine2-only users; apparently the first change is not applied
+    // otherwise; it reaches the end of scannable memory;
+    std::this_thread::sleep_for(std::chrono::seconds(5));
+    
     Log("author " + author);
 	Log("version " + version);
     Log_Separator();
