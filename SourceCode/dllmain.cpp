@@ -16,7 +16,7 @@ DWORD WINAPI MainThread(LPVOID lpParam) {
     std::this_thread::sleep_for(std::chrono::seconds(5));
     
     Log("author " + author);
-	Log("version " + version);
+    Log("version " + version);
     Log_Separator();
     Log_Separator();
     
@@ -48,7 +48,7 @@ DWORD WINAPI MainThread(LPVOID lpParam) {
 
     vanilla = "f3 0f 11 89 40 01 00 00 76 06 89 b9 40 01 00 00";
     modded = "c7 81 40 01 00 00 00 00 80 3f 90 90 90 90 90 90";
-	assembly_location = AobScan(vanilla);
+    assembly_location = AobScan(vanilla);
     if (assembly_location != 0) ReplaceExpectedBytesAtAddress(assembly_location, vanilla, modded);
     
     Log_Separator();
@@ -69,13 +69,14 @@ DWORD WINAPI MainThread(LPVOID lpParam) {
     Log_Separator();
     
     // are the return values used for anything?;
-	CloseLog();
+    CloseLog();
     return 0;
 }
 
 BOOL WINAPI DllMain(HINSTANCE module, DWORD reason, LPVOID) {
-	if (reason != DLL_PROCESS_ATTACH) return true;
-	DisableThreadLibraryCalls(module);
-	CreateThread(0, 0, &MainThread, 0, 0, NULL);
-	return true;
+    // someone wrote online that some processes might crash when returning false;
+    if (reason != DLL_PROCESS_ATTACH) return true;
+    DisableThreadLibraryCalls(module);
+    CreateThread(0, 0, &MainThread, 0, 0, NULL);
+    return true;
 }
